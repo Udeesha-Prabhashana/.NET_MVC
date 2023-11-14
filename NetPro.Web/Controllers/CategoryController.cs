@@ -16,5 +16,16 @@ namespace NetPro.Web.Controllers
             List<Category> objCategoryList = _db.Categories.ToList();
             return View(objCategoryList);
         }
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Category abj)
+        {
+            _db.Categories.Add(abj);
+            _db.SaveChanges();
+            return RedirectToAction("Index","Category");
+        }
     }
 }
