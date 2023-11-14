@@ -23,9 +23,13 @@ namespace NetPro.Web.Controllers
         [HttpPost]
         public IActionResult Create(Category abj)
         {
-            _db.Categories.Add(abj);
-            _db.SaveChanges();
-            return RedirectToAction("Index","Category");
+            if (ModelState.IsValid)           //examine all the validation of the model. only if that true than save the details of the database.
+            {
+                _db.Categories.Add(abj);
+                _db.SaveChanges();
+                return RedirectToAction("Index", "Category");
+            }
+            return View();
         }
     }
 }
