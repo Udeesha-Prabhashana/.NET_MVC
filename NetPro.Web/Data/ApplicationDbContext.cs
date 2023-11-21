@@ -12,14 +12,14 @@ namespace NetPro.Web.Data
 
         public DbSet<Category> Categories { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Category>().HasData(
-                new Category { Id = 1 , Name = "Action", DisplayOrder = 1 },
-                new Category { Id = 2 , Name = "Scrif", DisplayOrder = 2 },
-                new Category { Id = 3 , Name = "safe", DisplayOrder = 3 }
-            );
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Entity<Category>().HasData(
+        //        new Category { Id = 1 , Name = "Action", DisplayOrder = 1 },
+        //        new Category { Id = 2 , Name = "Scrif", DisplayOrder = 2 },
+        //        new Category { Id = 3 , Name = "safe", DisplayOrder = 3 }
+        //    );
+        //}
 
     }
 }

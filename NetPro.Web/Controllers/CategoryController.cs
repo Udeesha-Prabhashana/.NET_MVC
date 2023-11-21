@@ -62,10 +62,36 @@ namespace NetPro.Web.Controllers
             return View();
         }
 
-        public IActionResult Delete()
+
+        public IActionResult Delete(int? id)
         {
-            return View();
+            if (id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            Category? categoryFromDb = _db.Categories.Find(id);           //use retrive data from the database
+
+
+            if (categoryFromDb == null)
+            {
+                return NotFound();
+            }
+            return View(categoryFromDb);
         }
+        [HttpPost , ActionName("Delete")]
+        public IActionResult DeletePost(int? id)
+        {
+            Category? obj = _db.Categories.Find(id);
+            if (obj == null)           //examine all the validation of the model. only if that true than save the details of the database.
+            {
+                return NotFound();
+            }
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index", "Category");
+        }
+
 
     }
 }
