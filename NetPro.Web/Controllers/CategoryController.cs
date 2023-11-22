@@ -27,7 +27,7 @@ namespace NetPro.Web.Controllers
             {
                 _db.Categories.Add(abj);
                 _db.SaveChanges();
-                TempData["success"] = "Category created success";
+                TempData["success"] = "Category created successfully";
                 return RedirectToAction("Index", "Category");
             }
             return View();
