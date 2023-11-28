@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34227.203
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetPro.Web", "NetPro.Web\NetPro.Web.csproj", "{54AFDDAF-2FA8-4198-ACBF-4501CC9B8D27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetPro_Razor", "NetPro_Razor\NetPro_Razor.csproj", "{73B1F994-BC40-47A9-A9D7-90D9AC82711E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetPro_Razor", "NetPro_Razor\NetPro_Razor.csproj", "{73B1F994-BC40-47A9-A9D7-90D9AC82711E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
