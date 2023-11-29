@@ -1,12 +1,39 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using NetPro_Razor.Data;
+using NetPro_Razor.Models;
 
 namespace NetPro_Razor.Pages.Categories
 {
+    [BindProperties]
     public class DeleteModel : PageModel
     {
-        public void OnGet()
+        private readonly ApplicationDbContext _db;
+
+        public Category Category { get; set; }
+
+        public DeleteModel(ApplicationDbContext db)
         {
+            _db = db;
+        }
+        public void OnGet(int? id)
+        {
+            if (id != null && id != 0)
+            {
+                Category = _db.Categories.Find(id);
+            }
+        }
+
+        public IActionResult OnPost()
+        {
+            Category? obj = _db.Categories.Find(Category.Id);
+            if (obj == null)           //examine all the validation of the model. only if that true than save the details of the database.
+            {
+                return NotFound();
+            }
+            _db.Categories.Remove(obj);
+            _db.SaveChanges();
+            return RedirectToPage("Index");
         }
     }
 }
