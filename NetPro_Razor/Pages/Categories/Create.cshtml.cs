@@ -5,9 +5,11 @@ using NetPro_Razor.Models;
 
 namespace NetPro_Razor.Pages.Categories
 {
+    [BindProperties]
     public class CreateModel : PageModel
     {
         private readonly ApplicationDbContext _db;
+        
         public  Category Category { get; set; }
 
         public CreateModel(ApplicationDbContext db)
@@ -16,6 +18,13 @@ namespace NetPro_Razor.Pages.Categories
         }
         public void OnGet()
         {
+        }
+
+        public IActionResult OnPost()
+        {
+            _db.Categories.Add(Category);
+            _db.SaveChanges();
+            return RedirectToPage("Index");
         }
     }
 }
