@@ -1,4 +1,4 @@
-namespace NetPro.Web.Models
+namespace NetPro.Models
 {
     public class ErrorViewModel
     {

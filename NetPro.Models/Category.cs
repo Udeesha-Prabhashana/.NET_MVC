@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
-namespace NetPro.Web.Models
+namespace NetPro.Models
 {
     public class Category
     {

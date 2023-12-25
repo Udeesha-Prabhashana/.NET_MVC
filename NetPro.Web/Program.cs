@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using NetPro.Web.Data;
+using NetPro.DataAccess.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
