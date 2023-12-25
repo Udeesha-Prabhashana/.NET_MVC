@@ -15,4 +15,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NetPro.Models\NetPro.Models.csproj" />
+    <ProjectReference Include="..\NetPro.Utility\NetPro.Utility.csproj" />
+  </ItemGroup>
+
 </Project>

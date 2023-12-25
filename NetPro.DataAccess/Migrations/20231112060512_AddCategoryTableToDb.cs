@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace NetPro.Web.Migrations
+namespace NetPro.DataAccess.Migrations
 {
     /// <inheritdoc />
     public partial class AddCategoryTableToDb : Migration

@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using NetPro.Web.Data;
+using NetPro.DataAccess.Data;
 
 #nullable disable
 
-namespace NetPro.Web.Migrations
+namespace NetPro.DataAccess.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     [Migration("20231112144635_SeedCategoryTable")]

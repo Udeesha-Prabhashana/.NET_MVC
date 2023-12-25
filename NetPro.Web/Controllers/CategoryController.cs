@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using NetPro.Web.Data;
-using NetPro.Web.Models;
+using NetPro.DataAccess.Data;
+using NetPro.Models;
 
 namespace NetPro.Web.Controllers
 {
